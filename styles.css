@@ -4,24 +4,32 @@ body {
     color: #e2e8f0;
     background: #1a1a1a;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .presentation-container {
-    max-width: 1100px;
+    width: 95vw;
+    height: 95vh;
     margin: 0 auto;
     background: #2a2a2a;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
     border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .slide {
     padding: 40px;
     border-bottom: 1px solid #3d3d3d;
-    height: 700px;
+    flex: 1;
     position: relative;
     overflow-y: auto;
+    font-size: 1.1em;
 }
 
 .slide::-webkit-scrollbar {
@@ -55,30 +63,34 @@ h1 {
     color: white;
     letter-spacing: 1px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 2.2em;
 }
 
 h2 {
     border-bottom: 2px solid #ec407a;
     padding-bottom: 12px;
     margin-bottom: 24px;
+    font-size: 1.8em;
 }
 
 h3 {
     color: #ec407a;
     margin-top: 24px;
     font-weight: 600;
+    font-size: 1.5em;
 }
 
 h4 {
     color: #f48fb1;
     margin-bottom: 10px;
     font-weight: 500;
+    font-size: 1.3em;
 }
 
 .two-column {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
 
 .column {
@@ -93,8 +105,8 @@ h4 {
     background: #202020;
     border: 1px solid #ec407a;
     border-radius: 12px;
-    padding: 24px;
-    margin: 20px 0;
+    padding: 30px;
+    margin: 25px 0;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -102,8 +114,8 @@ h4 {
     background: #202020;
     border-left: 4px solid #ec407a;
     border-radius: 0 12px 12px 0;
-    padding: 18px;
-    margin-bottom: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -147,7 +159,7 @@ ul li, ol li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 40px;
     background: #202020;
     border-top: 1px solid #3d3d3d;
 }
@@ -156,11 +168,11 @@ button {
     background: linear-gradient(135deg, #5c258d 0%, #ec407a 100%);
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 12px 35px;
     cursor: pointer;
     border-radius: 40px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -189,7 +201,7 @@ button:disabled {
 
 img {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 30vh;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
