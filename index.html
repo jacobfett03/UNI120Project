@@ -5,201 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating More Free Time: A Time Management Solution</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #e2e8f0;
-            background: #1a202c;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        .presentation-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            background: #2d3748;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .slide {
-            padding: 40px;
-            border-bottom: 1px solid #4a5568;
-            height: 650px;
-            position: relative;
-            overflow-y: auto;
-        }
-        
-        .slide::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        .slide::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        
-        .slide::-webkit-scrollbar-thumb {
-            background: rgba(66, 153, 225, 0.5);
-            border-radius: 10px;
-        }
-        
-        .slide::-webkit-scrollbar-thumb:hover {
-            background: rgba(66, 153, 225, 0.7);
-        }
-        
-        .slide-number {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            color: #999;
-            font-size: 14px;
-        }
-        
-        h1, h2, h3 {
-            color: #e2e8f0;
-            font-weight: 600;
-        }
-        
-        h1 {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 0;
-            background: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
-            color: white;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        h2 {
-            border-bottom: 2px solid #4299e1;
-            padding-bottom: 12px;
-            margin-bottom: 24px;
-        }
-        
-        ul, ol {
-            margin-left: 20px;
-        }
-        
-        .highlight {
-            background: #2a4365;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-weight: 500;
-            color: #e2e8f0;
-            border: 1px solid #4299e1;
-        }
-        
-        .quote {
-            font-style: italic;
-            border-left: 4px solid #4299e1;
-            padding: 12px 20px;
-            margin: 24px 0;
-            color: #cbd5e0;
-            background-color: #1e293b;
-            border-radius: 0 6px 6px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        
-        .two-column {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .column {
-            width: 48%;
-        }
-        
-        .center-content {
-            text-align: center;
-        }
-        
-        .solution-box {
-            background: #1e293b;
-            border: 1px solid #4299e1;
-            border-radius: 12px;
-            padding: 24px;
-            margin: 20px 0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .resource-item {
-            background: #1e293b;
-            border-left: 4px solid #4299e1;
-            border-radius: 0 12px 12px 0;
-            padding: 18px;
-            margin-bottom: 18px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .resource-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        
-        img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: #1e293b;
-            border-top: 1px solid #4a5568;
-        }
-        
-        button {
-            background: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            cursor: pointer;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.3);
-        }
-        
-        button:active {
-            transform: translateY(0);
-        }
-        
-        button:disabled {
-            background: #4a5568;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-        
-        #slide-indicator {
-            font-size: 16px;
-            color: #a0aec0;
-            font-weight: 500;
-        }
-        
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="presentation-container">
+        <!-- Title Slide -->
         <div class="slide" id="slide-1">
             <h1>How Might I Create More Free Time?</h1>
             <div class="center-content">
-                <img src="/api/placeholder/400/200" alt="Clock showing free time" />
+                <img src="/images/free_time_clock.png" alt="Clock showing free time" />
                 <h3>A Time Management Solution</h3>
                 <p>Creative Problem Solving | UNI 120</p>
                 <p>Spring 2025</p>
@@ -207,6 +21,7 @@
             <div class="slide-number">1</div>
         </div>
         
+        <!-- Problem Statement Slide -->
         <div class="slide hidden" id="slide-2">
             <h2>The Problem</h2>
             <div class="two-column">
@@ -223,7 +38,7 @@
                     <p>This leads to stress, burnout, and reduced quality of life.</p>
                 </div>
                 <div class="column">
-                    <img src="/api/placeholder/300/200" alt="Person overwhelmed with tasks" />
+                    <img src="/images/overwhelmed.png" alt="Person overwhelmed with tasks" />
                     <p><strong>Design Question:</strong></p>
                     <p class="highlight">How do I create more free time without falling behind?</p>
                 </div>
@@ -231,6 +46,7 @@
             <div class="slide-number">2</div>
         </div>
         
+        <!-- Research Slide -->
         <div class="slide hidden" id="slide-3">
             <h2>What Research Tells Us</h2>
             <div class="resource-item">
@@ -251,6 +67,7 @@
             <div class="slide-number">3</div>
         </div>
         
+        <!-- Interview Insights Slide -->
         <div class="slide hidden" id="slide-4">
             <h2>Expert Interview Insights</h2>
             <p>From the interview with Laura Vanderkam, time management expert:</p>
@@ -279,6 +96,7 @@
             <div class="slide-number">4</div>
         </div>
         
+        <!-- Alternative Source Slide -->
         <div class="slide hidden" id="slide-5">
             <h2>Additional Research</h2>
             <div class="resource-item">
@@ -304,6 +122,7 @@
             <div class="slide-number">5</div>
         </div>
         
+        <!-- Solution Overview Slide -->
         <div class="slide hidden" id="slide-6">
             <h2>Proposed Solution: The Adaptive Time System</h2>
             <div class="solution-box">
@@ -329,6 +148,7 @@
             <div class="slide-number">6</div>
         </div>
         
+        <!-- Solution Details Slide -->
         <div class="slide hidden" id="slide-7">
             <h2>How It Works</h2>
             <div class="two-column">
@@ -366,6 +186,7 @@
             <div class="slide-number">7</div>
         </div>
         
+        <!-- Implementation Slide -->
         <div class="slide hidden" id="slide-8">
             <h2>Implementation Plan</h2>
             <div class="solution-box">
@@ -393,6 +214,7 @@
             <div class="slide-number">8</div>
         </div>
         
+        <!-- Resources Slide -->
         <div class="slide hidden" id="slide-9">
             <h2>Essential Resources</h2>
             <div class="two-column">
@@ -430,10 +252,11 @@
             <div class="slide-number">9</div>
         </div>
         
+        <!-- Conclusion Slide -->
         <div class="slide hidden" id="slide-10">
             <h2>Expected Outcomes</h2>
             <div class="center-content">
-                <img src="/api/placeholder/400/200" alt="Person enjoying free time" />
+                <img src="/images/enjoying_free_time.png" alt="Person enjoying free time" />
             </div>
             <div class="solution-box">
                 <h3>By implementing this adaptive time management system:</h3>
@@ -449,6 +272,7 @@
             <div class="slide-number">10</div>
         </div>
         
+        <!-- Navigation Controls -->
         <div class="navigation">
             <button id="prev-btn">Previous</button>
             <span id="slide-indicator">Slide 1 of 10</span>
@@ -456,41 +280,6 @@
         </div>
     </div>
 
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const slideIndicator = document.getElementById('slide-indicator');
-        let currentSlide = 0;
-
-        showSlide(currentSlide);
-
-        prevBtn.addEventListener('click', () => {
-            if (currentSlide > 0) {
-                showSlide(currentSlide - 1);
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            if (currentSlide < slides.length - 1) {
-                showSlide(currentSlide + 1);
-            }
-        });
-
-        function showSlide(n) {
-            slides.forEach(slide => {
-                slide.classList.add('hidden');
-            });
-            
-            slides[n].classList.remove('hidden');
-            
-            currentSlide = n;
-            
-            slideIndicator.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
-            
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide === slides.length - 1;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

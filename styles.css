@@ -1,0 +1,230 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #e2e8f0;
+    background: #1a1a1a;
+    margin: 0;
+    padding: 20px;
+}
+
+.presentation-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.slide {
+    padding: 40px;
+    border-bottom: 1px solid #3d3d3d;
+    height: 650px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.slide::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.slide::-webkit-scrollbar-thumb {
+    background: rgba(236, 64, 122, 0.5);
+    border-radius: 10px;
+}
+
+.slide::-webkit-scrollbar-thumb:hover {
+    background: rgba(236, 64, 122, 0.7);
+}
+
+h1, h2, h3 {
+    color: #e2e8f0;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 0;
+    background: linear-gradient(135deg, #5c258d 0%, #ec407a 100%);
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    border-bottom: 2px solid #ec407a;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+h3 {
+    color: #ec407a;
+    margin-top: 24px;
+    font-weight: 600;
+}
+
+h4 {
+    color: #f48fb1;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.column {
+    width: 48%;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.solution-box {
+    background: #202020;
+    border: 1px solid #ec407a;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.resource-item {
+    background: #202020;
+    border-left: 4px solid #ec407a;
+    border-radius: 0 12px 12px 0;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.highlight {
+    background: #3d2635;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #e2e8f0;
+    border: 1px solid #ec407a;
+}
+
+.quote {
+    font-style: italic;
+    border-left: 4px solid #ec407a;
+    padding: 12px 20px;
+    margin: 24px 0;
+    color: #cbd5e0;
+    background-color: #202020;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.slide-number {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    color: #a0aec0;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(26, 26, 26, 0.8);
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #202020;
+    border-top: 1px solid #3d3d3d;
+}
+
+button {
+    background: linear-gradient(135deg, #5c258d 0%, #ec407a 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #4a4a4a;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#slide-indicator {
+    font-size: 16px;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    border: 1px solid #ec407a;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(236, 64, 122, 0.2);
+}
+
+a {
+    color: #ec407a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #f48fb1;
+    text-decoration: underline;
+}
+
+strong {
+    color: #edf2f7;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
