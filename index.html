@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating More Free Time: A Time Management Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background: #1a202c;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .presentation-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #2d3748;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .slide {
+            padding: 40px;
+            border-bottom: 1px solid #4a5568;
+            height: 650px;
+            position: relative;
+            overflow-y: auto;
+        }
+        
+        .slide::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .slide::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        .slide::-webkit-scrollbar-thumb {
+            background: rgba(66, 153, 225, 0.5);
+            border-radius: 10px;
+        }
+        
+        .slide::-webkit-scrollbar-thumb:hover {
+            background: rgba(66, 153, 225, 0.7);
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        h1, h2, h3 {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 0;
+            background: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
+            color: white;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            border-bottom: 2px solid #4299e1;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+        }
+        
+        .highlight {
+            background: #2a4365;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #e2e8f0;
+            border: 1px solid #4299e1;
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #4299e1;
+            padding: 12px 20px;
+            margin: 24px 0;
+            color: #cbd5e0;
+            background-color: #1e293b;
+            border-radius: 0 6px 6px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .column {
+            width: 48%;
+        }
+        
+        .center-content {
+            text-align: center;
+        }
+        
+        .solution-box {
+            background: #1e293b;
+            border: 1px solid #4299e1;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .resource-item {
+            background: #1e293b;
+            border-left: 4px solid #4299e1;
+            border-radius: 0 12px 12px 0;
+            padding: 18px;
+            margin-bottom: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .resource-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #1e293b;
+            border-top: 1px solid #4a5568;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #3182ce 0%, #4299e1 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            background: #4a5568;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        #slide-indicator {
+            font-size: 16px;
+            color: #a0aec0;
+            font-weight: 500;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide" id="slide-1">
+            <h1>How Might I Create More Free Time?</h1>
+            <div class="center-content">
+                <img src="/api/placeholder/400/200" alt="Clock showing free time" />
+                <h3>A Time Management Solution</h3>
+                <p>Creative Problem Solving | UNI 120</p>
+                <p>Spring 2025</p>
+            </div>
+            <div class="slide-number">1</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-2">
+            <h2>The Problem</h2>
+            <div class="two-column">
+                <div class="column">
+                    <p>Many students struggle with balancing:</p>
+                    <ul>
+                        <li>Academic responsibilities</li>
+                        <li>Work commitments</li>
+                        <li>Personal time</li>
+                    </ul>
+                    <div class="quote">
+                        "I feel like I'm always playing catch-up instead of actually planning ahead."
+                    </div>
+                    <p>This leads to stress, burnout, and reduced quality of life.</p>
+                </div>
+                <div class="column">
+                    <img src="/api/placeholder/300/200" alt="Person overwhelmed with tasks" />
+                    <p><strong>Design Question:</strong></p>
+                    <p class="highlight">How do I create more free time without falling behind?</p>
+                </div>
+            </div>
+            <div class="slide-number">2</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-3">
+            <h2>What Research Tells Us</h2>
+            <div class="resource-item">
+                <h3>Academic Journal</h3>
+                <p><strong>Jackson, Valerie P. "Time Management: A Realistic Approach."</strong></p>
+                <p>Key findings:</p>
+                <ul>
+                    <li>Effective time management correlates with reduced stress levels</li>
+                    <li>Setting priorities is more important than creating rigid schedules</li>
+                    <li>Time management is a learned skill that improves with practice</li>
+                </ul>
+            </div>
+            <div class="resource-item">
+                <h3>ASU Resource</h3>
+                <p><strong>ASU Wellness - Time Management Resources</strong></p>
+                <p>Offers campus workshops, one-on-one coaching, and digital tools specifically designed for students juggling multiple responsibilities.</p>
+            </div>
+            <div class="slide-number">3</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-4">
+            <h2>Expert Interview Insights</h2>
+            <p>From the interview with Laura Vanderkam, time management expert:</p>
+            <div class="two-column">
+                <div class="column">
+                    <div class="quote">
+                        "Most time management tools just don't fit the way I work."
+                    </div>
+                    <div class="quote">
+                        "Distractions are my biggest issue—I need a way to stay focused on what matters."
+                    </div>
+                    <div class="quote">
+                        "Breaking big tasks into smaller steps helps, but I never know where to start."
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Key Takeaways:</h3>
+                    <ul>
+                        <li>Time management systems need flexibility</li>
+                        <li>Distraction management is crucial</li>
+                        <li>Breaking down tasks reduces overwhelm</li>
+                        <li>Regular reflection improves prioritization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-number">4</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-5">
+            <h2>Additional Research</h2>
+            <div class="resource-item">
+                <h3>Forbes Article</h3>
+                <p><strong>Singh, Somdutta. "The Ultimate Guide to Mastering Time Management."</strong></p>
+                <p>Modern techniques from business professionals:</p>
+                <ul>
+                    <li>Time-blocking methodology (dedicating specific time slots to tasks)</li>
+                    <li>Technology tools to minimize distractions</li>
+                    <li>The "two-minute rule" for quick tasks</li>
+                </ul>
+            </div>
+            <div class="resource-item">
+                <h3>University of St. Augustine</h3>
+                <p><strong>"9 Popular Time Management Techniques and Tools"</strong></p>
+                <p>Comparative analysis of time management frameworks:</p>
+                <ul>
+                    <li>Pomodoro Technique (25-minute work intervals)</li>
+                    <li>Eisenhower Matrix (urgent vs. important tasks)</li>
+                    <li>Time tracking and analysis tools</li>
+                </ul>
+            </div>
+            <div class="slide-number">5</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-6">
+            <h2>Proposed Solution: The Adaptive Time System</h2>
+            <div class="solution-box">
+                <h3>Core Components:</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>1. Weekly Priority Setting</h4>
+                        <p>Identify 2-3 "big rocks" that must get done each week</p>
+                        
+                        <h4>2. Daily Time Blocking</h4>
+                        <p>Schedule focused work periods with buffer time between tasks</p>
+                    </div>
+                    <div class="column">
+                        <h4>3. Distraction Management</h4>
+                        <p>Implement specific strategies to maintain focus</p>
+                        
+                        <h4>4. Weekly Review & Reset</h4>
+                        <p>Reflect on accomplishments and adjust for the coming week</p>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Key Differentiator:</strong> Flexibility built into the system to accommodate unexpected changes while maintaining progress on priorities.</p>
+            <div class="slide-number">6</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-7">
+            <h2>How It Works</h2>
+            <div class="two-column">
+                <div class="column">
+                    <h3>Weekly Priority Setting</h3>
+                    <ul>
+                        <li>Sunday evening: 15-minute planning session</li>
+                        <li>Identify top 2-3 priorities for the week</li>
+                        <li>Schedule these first in calendar</li>
+                    </ul>
+                    
+                    <h3>Daily Time Blocking</h3>
+                    <ul>
+                        <li>Morning: Quick daily plan (5 minutes)</li>
+                        <li>Schedule 90-minute focus blocks</li>
+                        <li>Include 30-minute buffer times</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Distraction Management</h3>
+                    <ul>
+                        <li>Phone in "Do Not Disturb" during focus blocks</li>
+                        <li>Use website blockers during work periods</li>
+                        <li>Capture random thoughts in a "later list"</li>
+                    </ul>
+                    
+                    <h3>Weekly Review & Reset</h3>
+                    <ul>
+                        <li>Review completed vs. incomplete tasks</li>
+                        <li>Identify time-wasters and adjust</li>
+                        <li>Celebrate wins and progress</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-number">7</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-8">
+            <h2>Implementation Plan</h2>
+            <div class="solution-box">
+                <h3>Week 1: Setup & Learning</h3>
+                <ul>
+                    <li>Select digital or paper planning system</li>
+                    <li>Install distraction-blocking tools</li>
+                    <li>Create templates for weekly and daily planning</li>
+                </ul>
+                
+                <h3>Week 2-3: Practice & Adjustment</h3>
+                <ul>
+                    <li>Implement system with daily reflection</li>
+                    <li>Note challenges and adjust approach</li>
+                    <li>Track actual time usage vs. planned</li>
+                </ul>
+                
+                <h3>Week 4+: Refinement & Maintenance</h3>
+                <ul>
+                    <li>Analyze what's working and what isn't</li>
+                    <li>Adjust time blocks based on actual needs</li>
+                    <li>Continue weekly reviews to maintain system</li>
+                </ul>
+            </div>
+            <div class="slide-number">8</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-9">
+            <h2>Essential Resources</h2>
+            <div class="two-column">
+                <div class="column">
+                    <h3>Digital Tools</h3>
+                    <ul>
+                        <li>Calendar app (Google Calendar or Apple Calendar)</li>
+                        <li>Focus app (Forest, Freedom, or Focus@Will)</li>
+                        <li>Task manager (Todoist or Microsoft To Do)</li>
+                    </ul>
+                    
+                    <h3>Campus Resources</h3>
+                    <ul>
+                        <li>ASU Time Management Center</li>
+                        <li>Academic Success Coaches</li>
+                        <li>Wellness workshops</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Additional Learning</h3>
+                    <ul>
+                        <li>"Deep Work" by Cal Newport</li>
+                        <li>Pomodoro Technique materials</li>
+                        <li>Time management templates</li>
+                    </ul>
+                    
+                    <h3>Support Network</h3>
+                    <ul>
+                        <li>Accountability partner</li>
+                        <li>Study groups</li>
+                        <li>Regular check-ins with advisor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-number">9</div>
+        </div>
+        
+        <div class="slide hidden" id="slide-10">
+            <h2>Expected Outcomes</h2>
+            <div class="center-content">
+                <img src="/api/placeholder/400/200" alt="Person enjoying free time" />
+            </div>
+            <div class="solution-box">
+                <h3>By implementing this adaptive time management system:</h3>
+                <ul>
+                    <li>Increase free time by 5-7 hours per week</li>
+                    <li>Reduce last-minute rushes and all-nighters</li>
+                    <li>Complete important tasks with less stress</li>
+                    <li>Improve quality of both work and leisure time</li>
+                    <li>Develop a sustainable skill for lifelong success</li>
+                </ul>
+            </div>
+            <p class="center-content"><strong>The Ultimate Impact: Having more time for myself while still meeting all responsibilities.</strong></p>
+            <div class="slide-number">10</div>
+        </div>
+        
+        <div class="navigation">
+            <button id="prev-btn">Previous</button>
+            <span id="slide-indicator">Slide 1 of 10</span>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const slideIndicator = document.getElementById('slide-indicator');
+        let currentSlide = 0;
+
+        showSlide(currentSlide);
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        });
+
+        function showSlide(n) {
+            slides.forEach(slide => {
+                slide.classList.add('hidden');
+            });
+            
+            slides[n].classList.remove('hidden');
+            
+            currentSlide = n;
+            
+            slideIndicator.textContent = `Slide ${currentSlide + 1} of ${slides.length}`;
+            
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+    </script>
+</body>
+</html>
