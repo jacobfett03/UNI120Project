@@ -19,7 +19,7 @@ body {
 .slide {
     padding: 40px;
     border-bottom: 1px solid #3d3d3d;
-    height: 650px;
+    height: 700px;
     position: relative;
     overflow-y: auto;
 }
@@ -140,16 +140,7 @@ ul li, ol li {
 }
 
 .slide-number {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    color: #a0aec0;
-    font-size: 14px;
-    font-weight: 500;
-    background: rgba(26, 26, 26, 0.8);
-    padding: 4px 10px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: none;
 }
 
 .navigation {
@@ -198,10 +189,12 @@ button:disabled {
 
 img {
     max-width: 100%;
+    max-height: 300px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
     border: 1px solid #ec407a;
+    object-fit: contain;
 }
 
 img:hover {
