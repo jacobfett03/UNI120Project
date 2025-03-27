@@ -9,6 +9,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23ec407a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2" fill="%23ec407a"/></svg>') 12 12, auto;
+    overflow-x: hidden;
 }
 
 .presentation-container {
@@ -21,15 +23,23 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .slide {
     padding: 40px;
     border-bottom: 1px solid #3d3d3d;
     flex: 1;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 46px;
     overflow-y: auto;
     font-size: 1.1em;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .slide::-webkit-scrollbar {
@@ -50,9 +60,21 @@ body {
     background: rgba(236, 64, 122, 0.7);
 }
 
-h1, h2, h3 {
-    color: #e2e8f0;
-    font-weight: 600;
+h1, h2, h3, h4, p, li, .quote, .highlight, .solution-box, .resource-item {
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+p:hover, li:hover, strong:hover {
+    background-color: rgba(236, 64, 122, 0.1);
+    box-shadow: 0 0 12px rgba(236, 64, 122, 0.5);
+    border-radius: 4px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="%23ec407a"/><circle cx="12" cy="12" r="3" fill="%23ffffff"/></svg>') 12 12, pointer;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover {
+    text-shadow: 0 0 15px rgba(236, 64, 122, 0.8);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="%23ec407a"/><circle cx="12" cy="12" r="3" fill="%23ffffff"/></svg>') 12 12, pointer;
 }
 
 h1 {
@@ -64,6 +86,10 @@ h1 {
     letter-spacing: 1px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
     font-size: 2.2em;
+}
+
+h1:hover {
+    background: linear-gradient(135deg, #6d35a5 0%, #ff579e 100%);
 }
 
 h2 {
@@ -110,6 +136,12 @@ h4 {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.solution-box:hover {
+    box-shadow: 0 0 30px rgba(236, 64, 122, 0.6);
+    transform: translateY(-5px);
+    border-color: #ff77a9;
+}
+
 .resource-item {
     background: #202020;
     border-left: 4px solid #ec407a;
@@ -117,12 +149,13 @@ h4 {
     padding: 25px;
     margin-bottom: 25px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .resource-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(236, 64, 122, 0.5);
+    border-left-width: 8px;
 }
 
 .highlight {
@@ -132,6 +165,13 @@ h4 {
     font-weight: 500;
     color: #e2e8f0;
     border: 1px solid #ec407a;
+}
+
+.highlight:hover {
+    background: #4f2e42;
+    box-shadow: 0 0 20px rgba(236, 64, 122, 0.8);
+    transform: scale(1.05);
+    border-color: #ff77a9;
 }
 
 .quote {
@@ -145,10 +185,22 @@ h4 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+.quote:hover {
+    border-left-width: 8px;
+    box-shadow: 0 0 20px rgba(236, 64, 122, 0.6);
+    transform: scale(1.03);
+    background-color: #242424;
+}
+
 ul li, ol li {
     margin-bottom: 10px;
     position: relative;
     padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+ul li:hover, ol li:hover {
+    color: #ffffff;
 }
 
 .slide-number {
@@ -162,6 +214,11 @@ ul li, ol li {
     padding: 15px 40px;
     background: #202020;
     border-top: 1px solid #3d3d3d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 button {
@@ -179,7 +236,8 @@ button {
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(236, 64, 122, 0.3);
+    box-shadow: 0 6px 20px rgba(236, 64, 122, 0.5);
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="%23ec407a"/><path d="M8 12h8"/></svg>') 12 12, pointer;
 }
 
 button:active {
@@ -199,37 +257,53 @@ button:disabled {
     font-weight: 500;
 }
 
+#slide-indicator:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(236, 64, 122, 0.8);
+}
+
 img {
     max-width: 100%;
     max-height: 30vh;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #ec407a;
     object-fit: contain;
 }
 
 img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 30px rgba(236, 64, 122, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(236, 64, 122, 0.6);
+    border: 2px solid #ff77a9;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="%23ec407a"/><path d="M9 12l2 2 4-4"/></svg>') 12 12, pointer;
 }
 
 a {
     color: #ec407a;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 a:hover {
     color: #f48fb1;
     text-decoration: underline;
+    text-shadow: 0 0 10px rgba(236, 64, 122, 0.5);
 }
 
 strong {
     color: #edf2f7;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+strong:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(236, 64, 122, 0.8);
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    transform: translateX(50px);
+    pointer-events: none;
 }
